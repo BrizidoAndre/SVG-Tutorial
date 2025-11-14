@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        margin:0 auto;
+    }
+    @keyframes increase {
+        from{
+            stroke-dasharray: 180 15;
+        }
+        to{
+            stroke-dasharray: 15 180;
+        }
+    }
+    circle{
+        animation: increase infinite alternate ease-in-out 1.3s;
+    }
+    svg{
+        animation: rotate infinite .8s linear
+    }
+    @keyframes rotate {
+        to{ rotate: 360deg}
+    }
+</style>
+<body>
+<div class="container">
+    <svg width="100" height="100" viewBox="-100 -100 200 200">
+        <circle r="30" stroke="red" fill="none" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+</div>
+</body>
+</html>

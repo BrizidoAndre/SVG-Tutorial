@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+    }
+    .container {
+        width: 300px;
+        margin: 0 auto;
+        height: 90vh;
+        display: grid;
+        place-items: center;
+    }
+
+    svg {
+        border: 1px dotted black;
+
+        & circle {
+            fill: deepskyblue;
+        }
+    }
+
+    .line {
+        stroke: #333;
+        stroke-width: 24;
+        stroke-linecap: round;
+    }
+
+    .square {
+        stroke: #333;
+        stroke-width: 20;
+        fill: none;
+    }
+</style>
+<body>
+<div class="container">
+    <h2>Usando linhas</h2>
+    <svg class="hover" width="100" height="100" viewbox="0 0 200 200">
+        <path
+                class="line"
+                d="M 50, 40 L 150, 40
+        M 50, 100 L 150, 100
+        M 50, 160 L 150, 160"
+        />
+    </svg>
+    <h2>Usando linhas para formar uma câmera</h2>
+    <svg width="100" height="100" viewbox="0 0 200 200">
+        <path
+                class="square"
+                d="M 10,60 L 10, 10 L 60 10
+       M 140, 10 L 190, 10 L 190, 60
+       M 10,140 L 10 190 L 60 190
+       M 140, 190 L 190, 190 L 190 140"
+        />
+    </svg>
+</div>
+</body>
+</html>
